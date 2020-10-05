@@ -21,3 +21,15 @@
     }
   }
 
+  @mixin theme-font-color($light, $dark) {
+    @media (prefers-color-scheme: light) {
+        background-color: white;
+        color: #111111;
+      }
+      
+      @media (prefers-color-scheme: dark) {
+        background-color: #111111;
+        color: white;
+      }
+  }
+
