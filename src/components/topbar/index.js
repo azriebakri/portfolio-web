@@ -40,10 +40,10 @@ function Topbar (){
             </div>
         </div>
         <div className="container-links">
-            <div className="container-links-item">
+            <div className="container-links-item" onClick={() => window.open('https://www.linkedin.com/in/azriebakri/', "_blank") || window.location.replace('https://www.linkedin.com/in/azriebakri/')}>
                 <LinkedInIcon/>
             </div>
-            <div className="container-links-item">
+            <div className="container-links-item" onClick={() => window.open('https://www.instagram.com/_azriebakri/', "_blank") || window.location.replace('https://www.instagram.com/_azriebakri/')}>
                 <InstaIcon/>
             </div>
         </div>
