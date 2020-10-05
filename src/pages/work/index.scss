@@ -45,25 +45,25 @@
             .intro-subheader {
 
                 margin: 25px 0;
+                line-height: 1.5em;
+                letter-spacing: 0.05em;
 
                 @media (prefers-color-scheme: light) {
                     color: grey;
                 }
                     
-                    @media (prefers-color-scheme: dark) {
+                @media (prefers-color-scheme: dark) {
                     color: white;
                 }
 
                 @media only screen and (min-width: 1000px) {
                     max-width: 400px;
                     font-size: 1.2em;
-                    letter-spacing: -0.05em;
                 }
 
                 @media only screen and (min-width: 1600px) {
                     max-width: 650px;
                     font-size: 1.5em;
-                    letter-spacing: -0.05em;
 
                 }
             }
@@ -79,8 +79,8 @@
             background: #000000;
 
             @media only screen and (min-width: 1000px) {
-                max-width: 444px;
-                height: 444px;
+                max-width: 433px;
+                height: 433px;
             }
 
             @media only screen and (min-width: 1200px) {
