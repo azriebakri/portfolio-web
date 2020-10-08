@@ -1,6 +1,5 @@
 @import "../../helper/global";
 
-
 .page-container {
 
     .about-section {
@@ -112,6 +111,56 @@
                 }
 
             }
+
+        }
+
+    }
+
+    .history-section {
+        display: flex;
+        flex-flow: column wrap;
+
+        @media (prefers-color-scheme: light) {
+            background-image: linear-gradient(#FFFFFF,#FFF2EA);
+        }
+
+        @media only screen and (min-width: 1000px) {
+            padding: 50px 40px 40px 40px;
+        }
+
+        @media only screen and (min-width: 1600px) {
+            padding: 100px 110px 175px 110px;
+        }
+
+        @media only screen and (min-width: 1700px) {
+            padding: 100px 150px 175px 150px;
+            max-width: 1600px;
+            margin: auto;
+        }
+
+        .history-section-title {
+
+            margin: 20px 0;
+            font-size: 1.5em;
+            letter-spacing: -0.05em;
+ 
+            @media only screen and (min-width: 1000px) {
+                font-size: 2.0em;
+            }
+
+            @media only screen and (min-width: 1600px) {
+                font-size: 2.9em;
+            }
+        }
+
+        .history-section-container {
+
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: repeat(5,25%);
+            grid-row-gap: 5px;
+
+            padding: 0 5px 50px 5px;
 
         }
 
