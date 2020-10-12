@@ -8,6 +8,7 @@
 
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
 
     padding: 10px 15px;
 
@@ -69,11 +70,6 @@
 
     }
 
-
-    .header-main-solo {
-
-    }
-
     .side-container {
         width: 35%;
         text-align: right;
@@ -87,6 +83,33 @@
         @media only screen and (min-width: 1600px) {
             font-size: 1.9em;
         }
+    }
+
+    .header-main-solo {
+        font-weight: bold;
+        font-size: 1.1em;
+        white-space: nowrap;
+        margin: 0 10px 0 0;
+        flex: 2;
+
+        @media only screen and (max-width: 350px) {
+            font-size: 0.95em;
+        }
+
+        @media only screen and (min-width: 1000px) {
+            font-size: 1.1em;
+        }
+
+        @media only screen and (min-width: 1600px) {
+            font-size: 1.5em;
+        }
+    }
+
+
+    .side-image {
+        max-width: 30px;
+        max-height: 30px;
+        flex: 1;
     }
 
 }

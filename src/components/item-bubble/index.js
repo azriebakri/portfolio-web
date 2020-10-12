@@ -23,7 +23,7 @@ function Bubble(props) {
         let sideDisplay = props.yearFrom !== null ? 
                 <h1 className="side-container"> {props.yearTo !== null ? `${props.yearFrom}-${props.yearTo}`:`${props.yearFrom}~`} </h1>
                 :
-                <img src={props.icon1}/>
+                <img className="side-image" src={props.icon}/>
                     
 
         let element = 
@@ -42,15 +42,23 @@ function Bubble(props) {
     const setGrid = () => {
 
         let temp = {...props.grid};
+        let minWidth = "190px";
 
         if(windowSize.width <= 800){
             temp.span = 12;
             temp.column = 1
         }
 
-        console.log(temp);
+        if(temp.row === undefined) {
 
-        return {gridColumn:`${temp.column}/span ${temp.span}`, gridRow:`${temp.row}`}
+            if(windowSize.width <= 511){
+                return { width:"100%", minHeight:"42px", margin: "0 4px 9px 4px"};
+            } else {
+                return { minWidth:"230px", minHeight:"42px", margin: "0 4px 9px 4px"};
+            }
+        } else {
+            return {gridColumn:`${temp.column}/span ${temp.span}`, gridRow:`${temp.row}`};
+        }
     }
 
     return (

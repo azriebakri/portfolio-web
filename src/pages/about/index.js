@@ -6,6 +6,7 @@ import "./index.scss";
 import Bubble from '../../components/item-bubble/index';
 import MeJPG from "../../assets/images/me.jpg";
 
+import { skills } from '../../helper/skills';
 
 function useWindowSize() {
     // Initialize state with undefined width/height so server and client renders match
@@ -103,6 +104,28 @@ function About(){
                         yearTo={null}
                         grid={{row:4, column:10, span:3}}
                     />
+                </div>
+            </section>
+            <section className="technical-section">
+                <h1 className="technical-section-title">
+                    Technology stack
+                </h1>
+                <div className="technical-section-container">
+                {
+                    Object.values(skills).map(val => {
+                        return (
+                            <Bubble 
+                                windowSize={{height: windowSize.height, width:windowSize.width}}
+                                header={val.header}
+                                subheader={null}
+                                yearFrom={null}
+                                yearTo={null}
+                                icon={val.icon}
+                            />
+                        )
+                    })
+                }
+
                 </div>
             </section>
         </div>
