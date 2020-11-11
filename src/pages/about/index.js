@@ -52,7 +52,7 @@ function About(){
                 <div className="about-section-text animated animatedFadeInUp fadeInUp">
                     <h1 className="about-header">
                         I’m Azrie, a fullstack developer who is 
-                        currently working for Service Rocket
+                        currently working for ServiceRocket
                         as a software engineer in Kuala Lumpur, Malaysia.
                     </h1>
                     <div className="about-subheader">
@@ -98,7 +98,7 @@ function About(){
                     />
                     <Bubble 
                         windowSize={{height: windowSize.height, width:windowSize.width}}
-                        header="Service Rocket"
+                        header="ServiceRocket"
                         subheader="Software Engineer"
                         yearFrom={20}
                         yearTo={null}
