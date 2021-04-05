@@ -3,7 +3,7 @@ import './index.scss';
 
 import {Link, useLocation } from "react-router-dom";
 
-import {  ReactComponent as InstaIcon } from "../../assets/icons/instagram.svg";
+import {  ReactComponent as GithubIcon } from "../../assets/icons/github.svg";
 import {  ReactComponent as LinkedInIcon }  from "../../assets/icons/linkedin.svg";
 
 const Selected = (path) => { 
@@ -13,7 +13,7 @@ const Selected = (path) => {
     let iconPath = check ? "span-selected" : "span-default";
   
     return iconPath
-  }
+}
 
 function Topbar (){
     return(
@@ -34,17 +34,25 @@ function Topbar (){
                 </Link>
             </div>
             <div className="container-navigation-item">
-                <span className="span-default"> 
-                    Contact
-                </span>
+                <a href="#" onClick={(e) => {
+                    if(window.tidioChatApi){
+                        window.tidioChatApi.open();
+                    } else {
+                        console.log("chat not yet ready");
+                    }
+                }}>
+                    <span className="span-default"> 
+                        Contact
+                    </span>
+                </a>
             </div>
         </div>
         <div className="container-links">
             <div className="container-links-item" onClick={() => window.open('https://www.linkedin.com/in/azriebakri/', "_blank") || window.location.replace('https://www.linkedin.com/in/azriebakri/')}>
                 <LinkedInIcon/>
             </div>
-            <div className="container-links-item" onClick={() => window.open('https://www.instagram.com/_azriebakri/', "_blank") || window.location.replace('https://www.instagram.com/_azriebakri/')}>
-                <InstaIcon/>
+            <div className="container-links-item" onClick={() => window.open('https://github.com/azriebakri', "_blank") || window.location.replace('https://www.instagram.com/_azriebakri/')}>
+                <GithubIcon/>
             </div>
         </div>
     </div>
